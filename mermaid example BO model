@@ -1,0 +1,163 @@
+flowchart TD
+    %% Setting explicit direction for the entire flowchart
+    direction TB
+    %% Model 1: Improved Loan Origination Volume
+    subgraph Model1["Model 1: Improved Loan Origination Volume"]
+        direction TB
+        BO1[Business Outcome:\nImproved Loan Origination Volume]
+       
+        subgraph BP_Model1["Business Process"]
+            BP1[Business Process:\nMortgage Application Submission and Approval]
+        end
+       
+        subgraph Stages_Model1["Stages"]
+            S1[Stage:\nApplication Submission]
+            S2[Stage:\nApplication Validation]
+        end
+       
+        subgraph Steps_Model1["Steps"]
+            ST1[Step:\nComplete Application Form]
+            ST2[Step:\nApplication Validation]
+        end
+       
+        subgraph Signals_Model1["Signals"]
+            SIG1_1[Application form\nload time]
+            SIG1_2[Submission\nsuccess rate]
+            SIG2_1[Validation\ntransaction latency]
+            SIG2_2[Validation\nerror rate]
+        end
+       
+        %% Connections for Model 1
+        BO1 ==> BP1
+        BP1 ==> S1
+        BP1 ==> S2
+        S1 ==> ST1
+        S2 ==> ST2
+        ST1 ==> SIG1_1
+        ST1 ==> SIG1_2
+        ST2 ==> SIG2_1
+        ST2 ==> SIG2_2
+    end
+   
+    %% Model 2: Higher Customer Retention
+    subgraph Model2["Model 2: Higher Customer Retention"]
+        direction TB
+        BO2[Business Outcome:\nHigher Customer Retention]
+       
+        subgraph BP_Model2["Business Process"]
+            BP2[Business Process:\nOnline Account Management]
+        end
+       
+        subgraph Stages_Model2["Stages"]
+            S3[Stage:\nAccount Access]
+            S4[Stage:\nTransaction Management]
+        end
+       
+        subgraph Steps_Model2["Steps"]
+            ST3[Step:\nCustomer Login]
+            ST4[Step:\nPayment Processing]
+        end
+       
+        subgraph Signals_Model2["Signals"]
+            SIG3_1[Login\nsuccess rate]
+            SIG3_2[Login\nlatency]
+            SIG4_1[Payment transaction\nsuccess rate]
+            SIG4_2[Transaction failure\nrate]
+            SIG4_3[Average resolution\ntime]
+        end
+       
+        %% Connections for Model 2
+        BO2 ==> BP2
+        BP2 ==> S3
+        BP2 ==> S4
+        S3 ==> ST3
+        S4 ==> ST4
+        ST3 ==> SIG3_1
+        ST3 ==> SIG3_2
+        ST4 ==> SIG4_1
+        ST4 ==> SIG4_2
+        ST4 ==> SIG4_3
+    end
+   
+    %% Model 3: Operational Cost Reduction
+    subgraph Model3["Model 3: Operational Cost Reduction"]
+        direction TB
+        BO3[Business Outcome:\nOperational Cost Reduction]
+       
+        subgraph BP_Model3["Business Process"]
+            BP3[Business Process:\nAutomated Backend Processing]
+        end
+       
+        subgraph Stages_Model3["Stages"]
+            S5[Stage:\nBatch Job Execution]
+        end
+       
+        subgraph Steps_Model3["Steps"]
+            ST5[Step:\nJob Completion]
+        end
+       
+        subgraph Signals_Model3["Signals"]
+            SIG5_1[Batch job\nsuccess rate]
+            SIG5_2[Batch job\nexecution duration]
+            SIG5_3[% automated vs.\nmanual interventions]
+        end
+       
+        %% Connections for Model 3
+        BO3 ==> BP3
+        BP3 ==> S5
+        S5 ==> ST5
+        ST5 ==> SIG5_1
+        ST5 ==> SIG5_2
+        ST5 ==> SIG5_3
+    end
+   
+    %% Model 4: Compliance and Risk Mitigation
+    subgraph Model4["Model 4: Compliance and Risk Mitigation"]
+        direction TB
+        BO4[Business Outcome:\nCompliance and Risk Mitigation]
+       
+        subgraph BP_Model4["Business Process"]
+            BP4[Business Process:\nRegulatory Data Reporting]
+        end
+       
+        subgraph Stages_Model4["Stages"]
+            S6[Stage:\nData Pipeline Processing]
+        end
+       
+        subgraph Steps_Model4["Steps"]
+            ST6[Step:\nData Transformation and Loading]
+        end
+       
+        subgraph Signals_Model4["Signals"]
+            SIG6_1[Pipeline\nerror rate]
+            SIG6_2[Data processing\ndelay]
+            SIG6_3[Data freshness\ncompliance]
+        end
+       
+        %% Connections for Model 4
+        BO4 ==> BP4
+        BP4 ==> S6
+        S6 ==> ST6
+        ST6 ==> SIG6_1
+        ST6 ==> SIG6_2
+        ST6 ==> SIG6_3
+    end
+   
+    %% Force vertical ordering of models
+    Model1 --- Model2 --- Model3 --- Model4
+
+
+   
+    %% Styling with higher contrast colors
+    classDef businessOutcome fill:#e67e22,stroke:#333,stroke-width:2px,color:#000
+    classDef businessProcess fill:#3498db,stroke:#333,stroke-width:1px,color:#fff
+    classDef stage fill:#2ecc71,stroke:#333,stroke-width:1px,color:#000
+    classDef step fill:#9b59b6,stroke:#333,stroke-width:1px,color:#fff
+    classDef signal fill:#f1c40f,stroke:#333,stroke-width:1px,color:#000
+   
+    class BO1,BO2,BO3,BO4 businessOutcome
+    class BP1,BP2,BP3,BP4 businessProcess
+    class S1,S2,S3,S4,S5,S6 stage
+    class ST1,ST2,ST3,ST4,ST5,ST6 step
+    class SIG1_1,SIG1_2,SIG2_1,SIG2_2,SIG3_1,SIG3_2,SIG4_1,SIG4_2,SIG4_3,SIG5_1,SIG5_2,SIG5_3,SIG6_1,SIG6_2,SIG6_3 signal
+
