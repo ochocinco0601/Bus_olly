@@ -1,0 +1,204 @@
+1️⃣ Business Outcome:
+     "Increased Successful Loan Origination"
+         → Business Signals:
+              • Overall Origination Volume
+              • Conversion Rate
+              • Top-line Customer Satisfaction
+         │
+         └── 2️⃣ Business Process:
+              "Loan Origination Process"
+                      │
+                      ├── 3️⃣ Stage 1: Customer Inquiry & Engagement
+                      │         [Outcome: Enhanced lead capture]
+                      │         │
+                      │         └── 4️⃣ Step: Execute Marketing & Capture Inquiry
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Lead Conversion Rate
+                      │                        │      • Customer Engagement Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Inquiry Response Time
+                      │                               • Marketing System Uptime
+                      │
+                      ├── 3️⃣ Stage 2: Prequalification & Screening
+                      │         [Outcome: Early filtering & risk profiling]
+                      │         │
+                      │         └── 4️⃣ Step: Perform Eligibility Check & Risk Profiling
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Prequalification Rate
+                      │                        │      • Average Risk Score
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Screening Processing Time
+                      │                               • Eligibility Check Accuracy
+                      │
+                      ├── 3️⃣ Stage 3: Application Intake & Documentation
+                      │         [Outcome: Complete, accurate application capture]
+                      │         │
+                      │         └── 4️⃣ Step: Collect Application & Documents
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Application Completion Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Document Submission Time
+                      │                               • Intake Portal System Uptime
+                      │
+                      ├── 3️⃣ Stage 4: Document Generation & Disclosure Delivery
+                      │         [Outcome: Timely and accurate document delivery]
+                      │         │
+                      │         └── 4️⃣ Step: Generate & Distribute Disclosure Documents
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Disclosure Turnaround Time (≤3 business days)
+                      │                        │      • Delivery Compliance Rate
+                      │                        │      • Document Accuracy Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Rate of Document Generation
+                      │                               • Latency of Document Generation
+                      │                               • Error Rate of Document Generation
+                      │                               • System Availability/Uptime
+                      │
+                      ├── 3️⃣ Stage 5: Initial Compliance & Data Verification
+                      │         [Outcome: Verified compliance & validated data]
+                      │         │
+                      │         └── 4️⃣ Step: Conduct Compliance & Data Checks
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Compliance Check Success Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Data Validation Accuracy
+                      │                               • Compliance Processing Time
+                      │
+                      └── 3️⃣ Stage 6: Application Review & Communication
+                              [Outcome: Clear decision-making & defined next steps]
+                                │
+                                └── 4️⃣ Step: Review Application & Communicate Decision
+                                         → 5️⃣ Signals:
+                                            ├─ Business Signals:
+                                            │      • Review Turnaround Time
+                                            │      • Customer Notification Rate
+                                            └─ Performance Reliability Signals:
+                                                   • Communication System Latency
+                                                   • Review Processing Time
+
+Below is the complete ASCII tree diagram for the Loan Origination Process using Model #2. In this version, the top-level Business Outcome now includes its own Business Signals. Following the diagram, you’ll find an explanation guide.
+
+```
+1️⃣ Business Outcome:
+     "Increased Successful Loan Origination"
+         → Business Signals:
+              • Overall Origination Volume
+              • Conversion Rate
+              • Top-line Customer Satisfaction
+         │
+         └── 2️⃣ Business Process:
+              "Loan Origination Process"
+                      │
+                      ├── 3️⃣ Stage 1: Customer Inquiry & Engagement
+                      │         [Outcome: Enhanced lead capture]
+                      │         │
+                      │         └── 4️⃣ Step: Execute Marketing & Capture Inquiry
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Lead Conversion Rate
+                      │                        │      • Customer Engagement Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Inquiry Response Time
+                      │                               • Marketing System Uptime
+                      │
+                      ├── 3️⃣ Stage 2: Prequalification & Screening
+                      │         [Outcome: Early filtering & risk profiling]
+                      │         │
+                      │         └── 4️⃣ Step: Perform Eligibility Check & Risk Profiling
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Prequalification Rate
+                      │                        │      • Average Risk Score
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Screening Processing Time
+                      │                               • Eligibility Check Accuracy
+                      │
+                      ├── 3️⃣ Stage 3: Application Intake & Documentation
+                      │         [Outcome: Complete, accurate application capture]
+                      │         │
+                      │         └── 4️⃣ Step: Collect Application & Documents
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Application Completion Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Document Submission Time
+                      │                               • Intake Portal System Uptime
+                      │
+                      ├── 3️⃣ Stage 4: Document Generation & Disclosure Delivery
+                      │         [Outcome: Timely and accurate document delivery]
+                      │         │
+                      │         └── 4️⃣ Step: Generate & Distribute Disclosure Documents
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Disclosure Turnaround Time (≤3 business days)
+                      │                        │      • Delivery Compliance Rate
+                      │                        │      • Document Accuracy Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Rate of Document Generation
+                      │                               • Latency of Document Generation
+                      │                               • Error Rate of Document Generation
+                      │                               • System Availability/Uptime
+                      │
+                      ├── 3️⃣ Stage 5: Initial Compliance & Data Verification
+                      │         [Outcome: Verified compliance & validated data]
+                      │         │
+                      │         └── 4️⃣ Step: Conduct Compliance & Data Checks
+                      │                  → 5️⃣ Signals:
+                      │                        ├─ Business Signals:
+                      │                        │      • Compliance Check Success Rate
+                      │                        └─ Performance Reliability Signals:
+                      │                               • Data Validation Accuracy
+                      │                               • Compliance Processing Time
+                      │
+                      └── 3️⃣ Stage 6: Application Review & Communication
+                              [Outcome: Clear decision-making & defined next steps]
+                                │
+                                └── 4️⃣ Step: Review Application & Communicate Decision
+                                         → 5️⃣ Signals:
+                                            ├─ Business Signals:
+                                            │      • Review Turnaround Time
+                                            │      • Customer Notification Rate
+                                            └─ Performance Reliability Signals:
+                                                   • Communication System Latency
+                                                   • Review Processing Time
+```
+
+---
+
+### Explanation Guide
+
+**1️⃣ Business Outcome:**  
+- **Definition:** The top-level strategic goal of the process—in this case, "Increased Successful Loan Origination."  
+- **Business Signals at this Level:**  
+  - *Overall Origination Volume:* The total number of loans originated.  
+  - *Conversion Rate:* The percentage of inquiries that convert into approved loans.  
+  - *Top-line Customer Satisfaction:* A high-level indicator of how customers perceive the origination experience.
+
+**2️⃣ Business Process:**  
+- **Definition:** The overarching process that supports the business outcome, here titled "Loan Origination Process."
+
+**3️⃣ Stages:**  
+- **Definition:** Discrete phases or groupings of related activities within the process. Each stage has an associated outcome that supports the overall business objective.  
+- **Examples in this model:**  
+  - Stage 1: Customer Inquiry & Engagement  
+  - Stage 2: Prequalification & Screening  
+  - Stage 3: Application Intake & Documentation  
+  - Stage 4: Document Generation & Disclosure Delivery  
+  - Stage 5: Initial Compliance & Data Verification  
+  - Stage 6: Application Review & Communication
+
+**4️⃣ Steps:**  
+- **Definition:** The specific action or task performed within each stage. Each step is designed to achieve the outcome of its respective stage.  
+- **Example:** In Stage 4, the step is "Generate & Distribute Disclosure Documents."
+
+**5️⃣ Signals:**  
+- **Definition:** Measurable KPIs that track the performance of each step. They are divided into two categories:
+  - **Business Signals:** Metrics that directly reflect business outcomes (e.g., turnaround time, compliance rates, accuracy).  
+  - **Performance Reliability Signals:** Metrics that monitor the technical or operational efficiency (e.g., generation rate, latency, error rate, system uptime).
+
+This hierarchical structure links high-level outcomes to granular steps and measurable signals, ensuring alignment between strategic objectives and day-to-day operations. It provides a dashboard-ready view that can inform both business strategy and technical performance improvements.
