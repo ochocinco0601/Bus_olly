@@ -1,0 +1,32 @@
+- **Introduction:**  
+  - Good morning, everyone. Thank you for your time.
+
+- **Overview of the Model:**  
+  - I’d like to briefly introduce our business observability model—a unified framework and model that helps us understand how our technology impacts key business outcomes in Home Lending.
+
+- **Core Concept:**  
+  - At its core, business observability creates a real-time, holistic view of our performance by connecting the health of our technical systems with meaningful business metrics and customer journeys.
+
+- **Beyond Traditional Monitoring:**  
+  - It goes beyond simply monitoring individual technology components; it shows the direct impact those components have on our critical business functions and on the experiences of our Home Lending customers.
+  - For example, consider our document generation process for mortgage disclosures: if there’s a delay or error, it directly affects the timely delivery of legally required documents, impacting both customer satisfaction and regulatory compliance.
+
+- **Top-Down Approach:**  
+  - We use a top-down approach: we start by defining our strategic business outcomes—such as increased successful loan originations—and then map these outcomes to key business processes.
+  - These processes are further broken down into stages and steps.
+  - Each step is monitored by signals that are divided into two groups:  
+    - **Business signals** (like disclosure turnaround time and delivery compliance)  
+    - **Performance reliability signals** (such as document generation rate, latency, and error rate).
+
+- **Benefits of the Integrated View:**  
+  - This integrated view empowers us to quickly identify issues, quantify customer impact using historical data, and make data-driven decisions.
+  - It bridges the gap between our technology teams and business stakeholders, ensuring faster detection and resolution of disruptions, improved visibility into our processes, and more efficient, customer-focused operations.
+
+- **Collaboration:**  
+  - I’d also like to mention that we’re collaborating with the Capital Markets team to prototype their version of this model, reinforcing our approach and providing a roadmap for broader integration across the organization.
+
+- **Next Steps:**  
+  - As a next step, I propose we schedule a follow-up discussion to explore specific business processes within Home Lending that we can model using this approach.
+
+- **Conclusion:**  
+  - Thank you.
