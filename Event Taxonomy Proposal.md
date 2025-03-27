@@ -58,6 +58,14 @@ This taxonomy applies to:
 
 ---
 
+## Notes
+
+- Business-focused dimensions may not be populated by default in all events.
+- Enrichment pipelines (e.g., in Splunk, BigPanda) can add these based on known mappings or metadata.
+- This taxonomy supports initiatives like business observability, KPI alerting, incident impact analysis, and executive reporting.
+
+---
+
 ## 4. Example Event Classification
 
 **Event**:  
