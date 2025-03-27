@@ -58,3 +58,30 @@ Use this sheet to quickly apply consistent tags to events across logs, metrics, 
 
 ## 5. Example: Tagged Event
 
+**Event**: "Customer payment failed due to service timeout"
+
+**Tags**:
+
+- layer: application  
+- service: payments  
+- signal: log  
+- cause: dependency  
+- symptom: timeout  
+- impact: high  
+- environment: prod  
+- owner: payments-team  
+- business_kpi: transaction-success-rate  
+- process_stage: payment-submission  
+- customer_action: make-payment  
+- segment: vip  
+- outcome: failed  
+- ticket_id: INC009876  
+
+---
+
+## 6. Resources
+
+- [Event Taxonomy Overview](#)  
+- [Field Mapping for BigPanda and Splunk](#)  
+- [Alert Enrichment Examples](#)  
+- [Playbooks by Service](#)
