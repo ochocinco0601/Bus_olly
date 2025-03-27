@@ -1,5 +1,11 @@
 # Position Paper: The Strategic Value of Informational Events in Event Management with Splunk ITSI
 
+## Executive Summary
+
+Informational events, though non-actionable, significantly enhance service health monitoring, incident correlation accuracy, and business observability within Splunk ITSI. Rather than universally dropping them, organizations should strategically tag, retain, and leverage these events to optimize operational visibility and decision-making effectiveness.
+
+---
+
 ## Purpose
 
 This paper evaluates the importance of retaining informational events in enterprise event pipelines and positions their use as a critical enabler of accurate service health scoring, correlation, and business observability within **Splunk ITSI**. While dropping these events may appear beneficial from a noise-reduction or cost-optimization standpoint, doing so may have significant trade-offs in terms of situational awareness, diagnostic depth, and business context.
