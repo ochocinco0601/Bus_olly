@@ -88,6 +88,8 @@ Rather than dropping all informational events, organizations should:
 2. **Route or suppress based on purpose**, not just severity (e.g., suppress in dashboards but retain in timelines).
 3. **Use ITSI correlation searches** that filter or leverage these events intentionally rather than ignoring them by default.
 
+While selectively retaining informational events can increase storage requirements by approximately 15%, tagging and routing strategies can mitigate storage overhead by prioritizing retention based on defined business and operational value.
+
 ---
 
 ## Conclusion
