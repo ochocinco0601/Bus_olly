@@ -240,29 +240,124 @@ Rationale: Composite Alert Patterns combine multiple conditions or signals to cr
 ## Suppression Patterns
 Rationale: Suppression Patterns focus on reducing alert noise by identifying and suppressing non-actionable or repetitive alerts. By suppressing known issues (e.g., noisy endpoints or transient failures), teams can avoid alert fatigue and focus on high-priority issues. This ensures that only relevant, actionable alerts are sent out, improving the signal-to-noise ratio and reducing the operational burden of handling false alarms.
 
+### **1. Known Noisy Endpoints**
+
 #### Rule ID: SP-001
-- **Name:** Known Noisy Endpoint (Suppression)  
-- **Condition:** Alerts from endpoint with known low-impact behavior (tagged `suppress_alert=true`)  
+- **Name:** Known Noisy Endpoint Suppression  
+- **Condition:** Alerts from endpoints or systems that are tagged as **noisy** or **non-actionable** in historical data.  
+- **Trigger Action:** Suppressed  
+- **Severity:** informational  
+- **Tier Applicability:** all  
+- **Rationale:** Known noisy endpoints generate frequent alerts that do not require attention and contribute to alert fatigue.
+
+---
+
+### **2. Temporary Failures or Retries**
+
+#### Rule ID: SP-002
+- **Name:** Suppress Temporary Failures or Retries  
+- **Condition:** Temporary network failures or retries that occur within a predefined time window (e.g., within 5 minutes).  
 - **Trigger Action:** Suppressed  
 - **Severity:** warning/informational  
 - **Tier Applicability:** all  
-- **Rationale:** Prevent unnecessary escalation from low-risk, known-noisy sources.
+- **Rationale:** Short-term issues (e.g., network blips or retries) that typically resolve on their own should not trigger alert storms.
 
-#### Rule ID: SP-002
-- **Name:** Flapping Alert Condition  
-- **Condition:** Alerting on/off toggles >3x in 30 minutes  
-- **Trigger Action:** Suppress repeat alerts, trigger incident only after threshold  
-- **Severity:** warning  
-- **Tier Applicability:** all  
-- **Rationale:** Reduces noise and alert fatigue caused by unstable but non-critical metrics.
+---
+
+### **3. Low-Priority System Alerts**
 
 #### Rule ID: SP-003
-- **Name:** Low-Tier System, Informational Event  
-- **Condition:** Informational alert from Tier 3/non-prod system  
-- **Trigger Action:** Suppressed or dashboard only  
+- **Name:** Low-Priority System Alert Suppression  
+- **Condition:** Alerts from systems or services that are categorized as low-priority or non-critical in the business context (e.g., non-prod environments).  
+- **Trigger Action:** Suppressed  
 - **Severity:** informational  
 - **Tier Applicability:** Tier 3  
-- **Rationale:** Visibility is maintained via dashboards, but no operational disruption expected.
+- **Rationale:** Non-production environments or low-impact systems do not require immediate intervention, and alerts can be suppressed to focus on high-priority systems.
+
+---
+
+### **4. Frequent or Recurring Alert Suppression**
+
+#### Rule ID: SP-004
+- **Name:** Flapping Alert Suppression  
+- **Condition:** Alerts that toggle between triggered and cleared multiple times (e.g., more than 3 times in 15 minutes).  
+- **Trigger Action:** Suppress repeated alerts  
+- **Severity:** warning  
+- **Tier Applicability:** all  
+- **Rationale:** Frequent toggling or flapping is often an indicator of unstable conditions that should be investigated manually, not automatically escalated each time.
+
+---
+
+### **5. Expected Maintenance Window**
+
+#### Rule ID: SP-005
+- **Name:** Suppress Alerts During Maintenance Window  
+- **Condition:** Alerts triggered during scheduled maintenance or planned downtime.  
+- **Trigger Action:** Suppressed  
+- **Severity:** informational  
+- **Tier Applicability:** all  
+- **Rationale:** Alerts generated during known maintenance periods should be suppressed to avoid unnecessary notifications.
+
+---
+
+### **6. Historical Anomalies or Known Issues**
+
+#### Rule ID: SP-006
+- **Name:** Suppress Known Issue Alerts  
+- **Condition:** Alerts related to **historically known issues** (e.g., performance degradation in a specific service identified as a recurring issue) that are being addressed or managed.  
+- **Trigger Action:** Suppressed  
+- **Severity:** informational  
+- **Tier Applicability:** all  
+- **Rationale:** Known issues that have been acknowledged and are not likely to lead to significant business disruption should be suppressed to avoid generating unnecessary alerts.
+
+---
+
+### **7. Low Impact Environment Alerts**
+
+#### Rule ID: SP-007
+- **Name:** Suppress Alerts from Low-Impact Environments  
+- **Condition:** Alerts from lower-priority or low-impact environments (e.g., sandbox, testing environments) that do not directly affect production or customer-facing services.  
+- **Trigger Action:** Suppressed  
+- **Severity:** informational  
+- **Tier Applicability:** Tier 3  
+- **Rationale:** Alerts from non-production environments do not require immediate action and can create unnecessary noise.
+
+---
+
+### **8. Low Severity Alerts**
+
+#### Rule ID: SP-008
+- **Name:** Low Severity Alerts Suppression  
+- **Condition:** Alerts classified as **low severity** that do not require immediate resolution or intervention.  
+- **Trigger Action:** Suppressed  
+- **Severity:** warning/informational  
+- **Tier Applicability:** all  
+- **Rationale:** Low-severity alerts that do not pose immediate risks to the business or customer experience should be suppressed to minimize alert fatigue.
+
+---
+
+### **9. Repetitive Alerts for Same Issue**
+
+#### Rule ID: SP-009
+- **Name:** Suppress Repetitive Alerts for Same Issue  
+- **Condition:** Repeated alerts for the same root cause or issue within a short period (e.g., same alert triggered more than 5 times in an hour).  
+- **Trigger Action:** Suppressed  
+- **Severity:** warning  
+- **Tier Applicability:** all  
+- **Rationale:** Repeated alerts for the same issue contribute to alert fatigue and are not useful if they represent the same underlying problem.
+
+---
+
+### **10. Non-Actionable Information Events**
+
+#### Rule ID: SP-010
+- **Name:** Suppress Non-Actionable Informational Events  
+- **Condition:** Informational events with no actionable consequence (e.g., logs that simply confirm an event without triggering further action).  
+- **Trigger Action:** Suppressed  
+- **Severity:** informational  
+- **Tier Applicability:** all  
+- **Rationale:** Informational events that do not provide additional value or trigger necessary action should be suppressed to focus on critical events.
+
 
 ---
 
