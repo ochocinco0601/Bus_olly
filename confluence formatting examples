@@ -1,0 +1,72 @@
+h1. Confluence Formatting Samples
+
+h2. Panel Color Examples
+
+h3. Information Panel
+{panel:borderColor=blue|titleBGColor=blue|title=Blue Information Panel}
+This is a blue panel typically used for key definitions, core concepts, and important informational content.
+* Key point one
+* Key point two
+{panel}
+
+h3. Warning Panel
+{panel:borderColor=red|titleBGColor=red|title=Red Warning Panel}
+Critical information or potential risks that require immediate attention.
+* Urgent consideration
+* High-priority item
+{panel}
+
+h3. Success Panel
+{panel:borderColor=green|titleBGColor=green|title=Green Success Panel}
+Positive outcomes, best practices, or successful implementation strategies.
+* Recommended approach
+* Successful implementation tip
+{panel}
+
+h3. Neutral Background Panel
+{panel:borderColor=gray|titleBGColor=gray|title=Gray Neutral Panel}
+Historical context or background information.
+* Contextual detail
+* Supporting information
+{panel}
+
+h2. Checklist Formatting Options
+
+h3. Standard Bullet Checklist
+* [ ] First task to complete
+* [ ] Second task in progress
+* [x] Completed task
+
+h3. Confluence Checklist Macro
+{checklist}
+- [ ] Unstarted task
+- [x] Completed task
+- [ ] Pending task
+{checklist}
+
+h3. Highlighted Checklist
+{panel:borderColor=green}
+*Getting Started Checklist:*
+* *[ ]* Identify critical business process
+* *[ ]* Map process stages and outcomes
+* *[ ]* Define business KPIs
+* *[ ]* Link technical components
+{panel}
+
+h2. Emphasis Techniques
+
+{panel:borderColor=blue}
+*Bold Key Terms*: Use for critical concepts
+_Italic for Subtle Emphasis_: Used for nuanced points
+*_Combination of Bold and Italic_*: For ultimate emphasis
+{panel}
+
+h2. Callout Examples
+
+{note}
+Important note that stands out from the main content.
+{note}
+
+{warning}
+Warning about potential challenges or critical considerations.
+{warning}
