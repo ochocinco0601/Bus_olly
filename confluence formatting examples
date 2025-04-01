@@ -1,72 +1,203 @@
-h1. Confluence Formatting Samples
+h1. Business Observability Handbook
 
-h2. Panel Color Examples
+h2. Introduction to Business Observability
 
-h3. Information Panel
-{panel:borderColor=blue|titleBGColor=blue|title=Blue Information Panel}
-This is a blue panel typically used for key definitions, core concepts, and important informational content.
-* Key point one
-* Key point two
+h3. What is Business Observability?
+
+{panel:borderColor=blue|titleBGColor=blue|title=Definition}
+Business observability is a structured approach to understanding how technology performance directly affects business outcomes and customer experiences. Unlike traditional IT monitoring, which focuses primarily on system health and technical metrics, business observability provides a holistic view that connects technical operations to business value.
 {panel}
 
-h3. Warning Panel
-{panel:borderColor=red|titleBGColor=red|title=Red Warning Panel}
-Critical information or potential risks that require immediate attention.
-* Urgent consideration
-* High-priority item
+h4. Core Questions
+
+At its core, business observability is about answering questions that matter to business stakeholders:
+
+* How are our systems supporting or hindering our business goals?
+* When technical issues occur, what is their actual impact on customers and revenue?
+* Which technical investments will drive the most business value?
+
+{note:borderColor=blue}
+Business observability represents an evolution in approach that delivers revolutionary impact by bridging the gap between IT operations and business outcomes.
+{note}
+
+h3. Evolution from Technical Monitoring to Business Observability
+
+The journey to business observability can be understood through three distinct stages:
+
+h4. Traditional Monitoring (Where we started)
+
+{panel:borderColor=gray|titleBGColor=gray|title=Early Stage}
+* Focused on infrastructure health and availability
+* Siloed metrics, logs, and alerts
+* Primarily reactive to incidents
+* Limited business context
 {panel}
 
-h3. Success Panel
-{panel:borderColor=green|titleBGColor=green|title=Green Success Panel}
-Positive outcomes, best practices, or successful implementation strategies.
-* Recommended approach
-* Successful implementation tip
+h4. Technical Observability (The intermediate step)
+
+{panel:borderColor=blue|titleBGColor=blue|title=Intermediate Stage}
+* Comprehensive system telemetry (metrics, logs, traces)
+* Understanding of system behavior and dependencies
+* More proactive problem detection
+* Still technically focused with limited business alignment
 {panel}
 
-h3. Neutral Background Panel
-{panel:borderColor=gray|titleBGColor=gray|title=Gray Neutral Panel}
-Historical context or background information.
-* Contextual detail
-* Supporting information
+h4. Business Observability (The destination)
+
+{panel:borderColor=green|titleBGColor=green|title=Destination Stage}
+* Technical metrics mapped to business processes
+* Customer journey visibility
+* Direct correlation between system performance and business KPIs
+* Shared understanding between technical and business teams
 {panel}
 
-h2. Checklist Formatting Options
+{note}
+This evolution shifts the focus from "Is the system working?" to "Is the business working?"
+{note}
 
-h3. Standard Bullet Checklist
-* [ ] First task to complete
-* [ ] Second task in progress
-* [x] Completed task
+h2. The Value Proposition: Why Business Observability Matters
 
-h3. Confluence Checklist Macro
-{checklist}
-- [ ] Unstarted task
-- [x] Completed task
-- [ ] Pending task
-{checklist}
+h3. For Technology Directors:
 
-h3. Highlighted Checklist
+{panel:borderColor=teal|titleBGColor=teal|title=Strategic Benefits}
+* Align technology investments with business priorities
+* Demonstrate IT's contribution to business value
+* Make data-driven decisions for technology strategy
+* Transform IT perception from cost center to value creator
+{panel}
+
+h3. For Technology Managers:
+
+{panel:borderColor=teal|titleBGColor=teal|title=Operational Benefits}
+* Prioritize team efforts based on business impact
+* Improve communication with business stakeholders
+* Justify resource allocation and tool investments
+* Accelerate incident resolution for business-critical issues
+{panel}
+
+h3. For Site Reliability Engineers:
+
+{panel:borderColor=teal|titleBGColor=teal|title=Technical Benefits}
+* Focus on the systems and services that matter most to the business
+* Develop more meaningful SLOs aligned with business outcomes
+* Prioritize incidents based on actual business impact
+* Demonstrate the value of reliability engineering work
+{panel}
+
+h3. For Business Product Managers:
+
+{panel:borderColor=teal|titleBGColor=teal|title=Product Management Benefits}
+* Gain visibility into how technical performance affects product KPIs
+* Communicate technical needs in business terms
+* Make data-driven product decisions
+* Collaborate more effectively with technical teams
+{panel}
+
+h2. The Business Observability Framework
+
+Business observability is implemented through a hierarchical framework that connects business outcomes to technical components:
+
+{panel:borderColor=blue|title=Framework Hierarchy}
+* Business Outcomes: High-level strategic goals and measurable impacts
+* Business Processes/Customer Journeys: Workflows and interactions that support outcomes
+* Stages: Logical segments within business processes
+* Steps: Individual tasks or actions within each stage
+* Signals: Measurable indicators of health and performance
+* Observability Data: Underlying technical telemetry
+{panel}
+
+{note}
+This framework provides a common language for business and technical teams to understand system health in relation to business functions and customer experience.
+{note}
+
+h2. Key Principles of Business Observability
+
+{panel:borderColor=green|titleBGColor=green|title=Guiding Principles}
+* *Start with business outcomes*: Begin by understanding what success looks like for the business, then work backward to the supporting technical components.
+* *Focus on customer journeys*: Center observability efforts on the paths customers take through your systems and services.
+* *Connect technical metrics to business impact*: Establish clear relationships between technical performance indicators and business KPIs.
+* *Create shared context*: Build a common understanding between technical and business teams about how systems support business processes.
+* *Enable data-driven decisions*: Provide insights that allow both technical and business stakeholders to make informed choices.
+{panel}
+
+h2. Quick Win Examples
+
+h3. Example 1: E-commerce Checkout Flow Monitoring
+
+h4. Business Challenge
+
+{panel:borderColor=red|titleBGColor=red|title=Critical Issue}
+An e-commerce company was experiencing abandoned carts but couldn't determine if the issues were technical or related to user experience.
+{panel}
+
+h4. Business Observability Approach
+
+{panel:borderColor=green|titleBGColor=green|title=Implementation Strategy}
+The team mapped the checkout process into stages (cart review, shipping information, payment processing, order confirmation) and identified key signals at each step (page load time, error rates, time spent on page, success rate).
+{panel}
+
+h4. Implementation
+
+* Created a dashboard organized by checkout flow stages instead of technical services
+* Added business context to alerts (e.g., "Payment processing failures impacting approximately $10,000 in orders per hour")
+* Correlated technical metrics with conversion rates
+
+h4. Results
+
+{panel:borderColor=teal|titleBGColor=teal|title=Positive Outcomes}
+* Identified that payment processing API latency directly correlated with cart abandonment
+* Reduced checkout abandonment by 15% by optimizing the payment service
+* Provided clear business impact metrics that justified priority engineering attention
+* Improved collaboration between engineering and product teams
+{panel}
+
+h3. Example 2: Loan Application Processing Visibility
+
+h4. Business Challenge
+
+{panel:borderColor=red|titleBGColor=red|title=Critical Visibility Gap}
+A financial services company had limited visibility into how system performance affected loan application completion rates and processing times.
+{panel}
+
+h4. Business Observability Approach
+
+{panel:borderColor=green|titleBGColor=green|title=Implementation Strategy}
+The team mapped the loan application process (application submission, validation, credit check, decision, communication) and defined signals for each step.
+{panel}
+
+h4. Implementation
+
+* Created a unified dashboard showing both technical health and business metrics
+* Established alerting based on application processing SLAs
+* Connected system performance data with loan approval rates
+
+h4. Results
+
+{panel:borderColor=teal|titleBGColor=teal|title=Positive Outcomes}
+* Identified that batch job scheduling issues were delaying application processing
+* Reduced loan decision time by 30% by optimizing database queries
+* Increased application completion rate by 25% by addressing form submission API errors
+* Provided executives with real-time visibility into loan pipeline health
+{panel}
+
+h2. Getting Started with Business Observability
+
+{panel:borderColor=green|titleBGColor=green|title=Actionable Steps}
+Business observability doesn't require replacing your existing monitoring infrastructure. Instead, it builds upon your current investments by adding business context and correlation.
+{panel}
+
+h3. How to Begin
+
 {panel:borderColor=green}
 *Getting Started Checklist:*
 * *[ ]* Identify critical business process
 * *[ ]* Map process stages and outcomes
 * *[ ]* Define business KPIs
 * *[ ]* Link technical components
+* *[ ]* Build dashboards around business processes
+* *[ ]* Engage technical and business stakeholders
 {panel}
 
-h2. Emphasis Techniques
-
-{panel:borderColor=blue}
-*Bold Key Terms*: Use for critical concepts
-_Italic for Subtle Emphasis_: Used for nuanced points
-*_Combination of Bold and Italic_*: For ultimate emphasis
-{panel}
-
-h2. Callout Examples
-
 {note}
-Important note that stands out from the main content.
+In the following sections, we'll dive deeper into the Business Observability Reference Model and provide detailed implementation guidance.
 {note}
-
-{warning}
-Warning about potential challenges or critical considerations.
-{warning}
