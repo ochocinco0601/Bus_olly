@@ -25,7 +25,8 @@
 | 1 | Use GenAI template prompt | Generate a draft observability template for a step     | Pre-filled template                | - Prompt: Template Completion<br>- Form-Style Template | Product Owner                              |
 | 2 | Fill in or refine fields  | Collaborate with Product, Dev, SRE to complete context | Completed template                 | - Template Field Cheatsheet<br>- Persona Role Guides   | Product Owner, App Developer, Platform SRE |
 | 3 | Validate ownership fields | Confirm each field has a defined accountable role      | Ready for matrix and signal design | - Template Validation Checklist                       | Observability Facilitator                   |
-| 4 | Suggest missing template fields (if needed) | Use signal-type + step-type prompt matrix to propose draft values and unblock progress | Drafted or placeholder field values | Prompt Matrix         | Product Owner, App Developer     |
+| 4 | Use `Prompt: Business Observability Template Validation` | Apply the prompt matrix to suggest missing values for any incomplete fields | Drafted or placeholder field values | Prompt Matrix | Product Owner, App Developer |
+
 
 
 ### 4. Build the Signal Matrix
