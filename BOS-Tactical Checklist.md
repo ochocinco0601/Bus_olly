@@ -26,21 +26,19 @@
 | 2 | Fill in or refine fields  | Collaborate with Product, Dev, SRE to complete context | Completed template                 | - Template Field Cheatsheet<br>- Persona Role Guides   | Product Owner, App Developer, Platform SRE |
 | 3 | Validate ownership fields | Confirm each field has a defined accountable role      | Ready for matrix and signal design | - Template Validation Checklist                       | Observability Facilitator                   |
 | 4 | Use `Prompt: Business Observability Template Validation` | Apply the prompt matrix to suggest missing values for any incomplete fields | Drafted or placeholder field values | Prompt Matrix | Product Owner, App Developer |
+
 > ✅ Once the observability template is complete and validated, continue to **Step 4.1** and apply the `Prompt: Generate Signal Matrix Row`.  
 > This will enrich the template with structured `Business Signal`, `Process Signal`, and `System Signal` definitions, each with assigned ownership.
 
+### 4. Enrich Template with Signal Definitions
 
+> This step transforms a fully validated observability template into a complete, actionable artifact by embedding Business, Process, and System signals directly into the template. Signals are classified and assigned ownership using the Persona Role Guide. The updated template becomes the authoritative source for dashboards, alerts, and traceability.
 
-### 4. Build the Signal Matrix
-> ⚠️ Use this step **only after** the observability template has been validated for completeness.  
-> This step assumes all contextual, KPI, and ownership fields are fully populated in the template.
-
-| # | Task                       | Description                                                      | Output                            | Supporting Artifact                  | Responsible Role(s)             |
-|---|----------------------------|------------------------------------------------------------------|-----------------------------------|--------------------------------------|---------------------------------|
-| 1 | Extract signal candidates  | Translate template content into signals by type                  | Draft matrix row                  | - Prompt: Generate Signal Matrix Row | App Developer, Platform SRE     |
-| 2 | Categorize & assign owners | Classify as Business or Performance Reliability (Process/System) | Tagged signal matrix row          | - Persona Role Guides                | Observability Facilitator       |
-| 3 | Review signal completeness | Validate signal coverage for each step                           | Signal-ready input for dashboards | - Template Validation Checklist      | Observability Facilitator       |
-| 4 | Update original template with validated signals | Copy signal types and assigned owners from Step 4.1 into the `Business Signals`, `Process Signal`, and `System Signal` fields of the original observability template | Fully enriched step template | Signal Matrix Row Output | Observability Facilitator |
+| # | Task | Description | Output | Supporting Artifact | Responsible Role(s) |
+|---|------|-------------|--------|----------------------|----------------------|
+| 1 | Enrich template with observability signals | Use the prompt to identify Business, Process, and System signals based on the validated template context | Signals embedded in the template fields: Business Signals, Process Signal, System Signal | `BOS-prompt for BO template signals.md` | Observability Facilitator, App Developer |
+| 2 | Assign owners to each signal | For each signal, apply ownership using the Persona Role Guide | Ownership metadata embedded in template alongside signals | Persona Role Guide | Observability Facilitator, Product Owner |
+| 3 | Confirm signal coverage and readiness | Validate that all signal types are represented, clearly named, and linked to the template’s business goals or technical function | Fully enriched template ready for dashboard mockups, alerting design, and traceability mapping | Template Validation Checklist | Observability Facilitator |
 
 
 ### 5. Create the Mini Reference Card
