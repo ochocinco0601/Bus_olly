@@ -1,4 +1,4 @@
-# ** Reusable GenAI Prompt for Business Observability Template Completion**
+# Reusable GenAI Prompt for Business Observability Template Completion
 
 **Prompt:**  
  You are helping populate a Business Observability Template for a specific business process step.  
