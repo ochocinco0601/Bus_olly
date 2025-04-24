@@ -36,6 +36,8 @@
 | 1 | Extract signal candidates  | Translate template content into signals by type                  | Draft matrix row                  | - Prompt: Generate Signal Matrix Row | App Developer, Platform SRE     |
 | 2 | Categorize & assign owners | Classify as Business or Performance Reliability (Process/System) | Tagged signal matrix row          | - Persona Role Guides                | Observability Facilitator       |
 | 3 | Review signal completeness | Validate signal coverage for each step                           | Signal-ready input for dashboards | - Template Validation Checklist      | Observability Facilitator       |
+| 4 | Update original template with validated signals | Copy signal types and assigned owners from Step 4.1 into the `Business Signals`, `Process Signal`, and `System Signal` fields of the original observability template | Fully enriched step template | Signal Matrix Row Output | Observability Facilitator |
+
 
 ### 5. Create the Mini Reference Card
 
