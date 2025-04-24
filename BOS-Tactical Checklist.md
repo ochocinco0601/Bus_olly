@@ -26,10 +26,14 @@
 | 2 | Fill in or refine fields  | Collaborate with Product, Dev, SRE to complete context | Completed template                 | - Template Field Cheatsheet<br>- Persona Role Guides   | Product Owner, App Developer, Platform SRE |
 | 3 | Validate ownership fields | Confirm each field has a defined accountable role      | Ready for matrix and signal design | - Template Validation Checklist                       | Observability Facilitator                   |
 | 4 | Use `Prompt: Business Observability Template Validation` | Apply the prompt matrix to suggest missing values for any incomplete fields | Drafted or placeholder field values | Prompt Matrix | Product Owner, App Developer |
+> ✅ Once the observability template is complete and validated, continue to **Step 4.1** and apply the `Prompt: Generate Signal Matrix Row`.  
+> This will enrich the template with structured `Business Signal`, `Process Signal`, and `System Signal` definitions, each with assigned ownership.
 
 
 
 ### 4. Build the Signal Matrix
+> ⚠️ Use this step **only after** the observability template has been validated for completeness.  
+> This step assumes all contextual, KPI, and ownership fields are fully populated in the template.
 
 | # | Task                       | Description                                                      | Output                            | Supporting Artifact                  | Responsible Role(s)             |
 |---|----------------------------|------------------------------------------------------------------|-----------------------------------|--------------------------------------|---------------------------------|
