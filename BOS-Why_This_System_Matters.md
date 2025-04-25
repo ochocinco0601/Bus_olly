@@ -13,6 +13,8 @@ This file captures the foundational insights, framing, and deeper system design 
 
 Every entry in this file reflects an effort to teach ownership, relevance, and responsibility — not only for BOS today, but for the design of future systems tomorrow.
 
+>⚡ Note: While this file begins with the Business Observability System (BOS) context, the insights and principles captured here are intended to evolve into a reusable foundation for future systems, frameworks, and initiatives beyond BOS.
+
 ---
 
 # 1. Introduction: Why BOS is Special
