@@ -10,6 +10,11 @@ Use this prompt when a Business Observability Template is partially completed or
 - Use signal-type + step-type reasoning based on the Prompt Matrix.
 - Avoid introducing fictitious values unless explicitly requested; draft plausible placeholders using business or technical context.
 ---
+### Output Guidelines
+- Return the **entire Business Observability Template** as a markdown table using the `Field | Value` format shown below.
+- This table must reflect the **complete system-of-record version** for the step — fully validated, enriched, and ready for signal generation.
+- Do not summarize, separate, or extract fields. Output should be a single consolidated table representing the final state of the step template.
+---
 ## Formatting Conventions
 - Use `inline code` for structural labels like `Suggested:`, `Owner:`, `KPI:`
 - Use *italics* for all AI-generated or recommended content
@@ -20,9 +25,6 @@ Use this prompt when a Business Observability Template is partially completed or
 - A partially completed Business Observability Template
 - (Optional) Known `Step Type` (e.g., Execution, Validation, Compliance)
 - (Optional) Any domain-specific context about the system or business process
----
-## Output Format
-Return the enhanced template in the same structure with one row per field. Use markdown tables or field-level listings. Place bulleted suggestions inside the field's cell when multiple values are expected.
 ---
 ## Prompt Matrix Reference (for reasoning)
 | Signal Type        | Step Type     | Prompt Guidance                                                                 |
