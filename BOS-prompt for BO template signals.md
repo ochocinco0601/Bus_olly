@@ -39,9 +39,7 @@ Return a full Business Observability Template table like this:
 | Customers / Internal Users        | - [User group 1] <br> - [User group 2]                                                            |
 | What Are Users Trying to Accomplish? | - [Intent 1] <br> - [Intent 2]                                                                  |
 | Target Outcomes (KPI)             | - [Business KPI or operational goal]                                                              |
-| Definition or Formula (KPI)       | ```
-  [Calculation formula or rule]
-  ```                                                                                             |
+| Definition or Formula (KPI)       | ```[Calculation formula or rule]```                                                               |
 | Business Signals                  | - `Suggested:` *[Signal 1]* <br> - `Suggested:` *[Signal 2]* <br> `Owner:` Product Owner          |
 | Process Signal                    | - `Suggested:` *[Signal 1]* <br> - `Suggested:` *[Signal 2]* <br> `Owner:` Application Developer  |
 | System Signal                     | - `Suggested:` *[Signal 1]* <br> - `Suggested:` *[Signal 2]* <br> - `Suggested:` *[Signal 3]* <br> `Owner:` Platform SRE |
