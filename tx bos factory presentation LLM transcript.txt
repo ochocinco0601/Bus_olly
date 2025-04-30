@@ -1,0 +1,81 @@
+(Transcript Start)
+(Slide 1: Title Slide - BOS Factory: From Problem to Solution)
+(Presenter): Good morning/afternoon, everyone. Today, we're talking about the BOS Factory and how it provides real solutions to real problems we face every day in managing our critical business processes [1-4].
+(Slide 2: The Problem: Incident Response Today)
+(Presenter): Let's start with a real-world problem we've all experienced. Think back to when the FICC Gateway went down at 6:08 AM [4-6]. What happened?
+•
+The Platform team got alerts about system availability [4-6].
+•
+But nobody knew the business impact for 45+ minutes [3-7].
+•
+There was no clear ownership of who needed to act [1, 4-8].
+•
+Multiple teams scrambled, trying to piece together meaning [4-6].
+•
+And our business stakeholders kept asking, "What does this mean for us?" [1, 4-6, 8].
+(Presenter): This highlights a critical issue: fragmented observability disconnected from business impact [9], often with unclear ownership [1-3, 7-9]. It's not just a technology problem; it's a shared responsibility problem [4]. Our dashboards don't keep up when business changes [1, 8], we can't tie system alerts to business impact [1, 8], and we lack a scalable, consistent process to build business observability [1-3, 7, 8].
+(Slide 3: The Solution: The BOS Factory)
+(Presenter): Our solution is the BOS Factory [10]. Its purpose and vision are to systematically build business observability that connects daily technical work to business outcomes by embedding ownership, relevance, and responsibility at every layer [11]. The Factory creates structured artifacts with clear ownership that connect system alerts directly to business outcomes [10].
+(Presenter): The fundamental success factor for the BOS Factory is a shared ownership model [12-14]. This is a three-way partnership [15-17], not just Platform's job [15, 16].
+•
+Product Teams are responsible for defining what business metrics matter and setting thresholds for "good" vs "bad" [12, 13, 15, 16]. They know which outcomes matter to customers [15, 16].
+•
+Application Teams are responsible for explaining how the business logic flows and identifying key process checkpoints [12, 13, 15, 16]. They know how the application processes work [15, 16].
+•
+Platform Teams are responsible for building the monitoring infrastructure and implementing dashboards and alerts [12, 13, 15, 16]. They provide the foundation but need input from the other teams [15, 16].
+(Slide 4: How the Factory Works)
+(Presenter): The Factory works through a repeatable process, proven with our Capital Markets team [10, 18-22].
+1.
+Product defines what matters to the business [18, 19].
+2.
+App Dev explains how the application processes work [18, 19].
+3.
+Platform builds how we'll monitor it [18, 19].
+4.
+And all three sign off, agreeing on their responsibilities [18, 19].
+(Presenter): This structured approach involves phases like Define, Populate, Validate, Build, and Monitor [3, 9, 21], converting your business priorities into requirements and outputs [23].
+(Slide 5: Real Factory Artifacts)
+(Presenter): We've already built real artifacts [3, 10, 24-26] with Jake's team in Capital Markets [3, 10, 18, 19, 25, 26].
+(Presenter): First, the Mini-Reference Card [3, 10, 18, 19, 24-26]. This is a one-page summary for a business step, showing why it matters to the business [3, 10, 18, 19], who owns each signal, and what to do when something breaks [3, 18, 19]. For example, for "Step 1.1: Receive Pooling Data from System B" [27-29], it clearly states that ensuring accurate and timely ingestion is critical for compliant trade creation, reducing operational risk, and avoiding downstream delays [10, 27, 28]. It lists observability signals, categorised by BUSINESS (e.g., Percent of pool files ingested within SLA), PROCESS (e.g., Validation pass rate), and SYSTEM (e.g., Ingestion job latency) [29-31]. Crucially, each signal has a defined owner: Product Owner, Application Developer, or Platform SRE [9, 29-31]. It also includes a Responsibility Table mapping conditions (like SLA breach or validation failures) to actions and the responsible role [18, 19, 32-34].
+(Presenter): Second, the Dashboard Panel [3, 10, 18, 19, 24-26]. This is a visual display showing the health of the step [3, 18, 19]. It presents the same layered signals: BUSINESS signals (owned by Product Owner) [3, 18, 19, 34-36], PROCESS signals (owned by Application Developer) [3, 18, 19, 37-39], and SYSTEM signals (owned by Platform SRE) [3, 18, 19, 37-39]. Each signal clearly shows its status and owner [3, 18, 19, 34-39]. This panel is designed to be used in Start of Day reviews [3, 18, 19].
+(Presenter): We also have artifacts like the Persona Role Guide defining ownership boundaries [3, 24-26], a Tactical Checklist providing a repeatable workflow [3, 24-26], and a BO Template to standardize requirements capture [3, 24-26].
+(Slide 6: The Same Incident With BOS Factory in Place)
+(Presenter): Let's revisit that FICC Gateway incident, but this time, imagine it happening with these BOS Factory artifacts in place [40, 41].
+•
+There would be immediate business context: Trade creation (Stage 1) is impacted [40, 41].
+•
+There would be clear ownership: Each signal is tied to a specific role [40, 41].
+•
+There's an Action table: Predefined responses based on the condition [40, 41].
+•
+Business impact is visible via the SLA compliance status (a Product-owned metric) [40, 41].
+•
+Process verification is visible via validation pass rates (an App Dev-owned metric) [40, 41].
+•
+And System status is visible via gateway response times (a Platform-owned metric) [40, 41].
+(Presenter): This transforms observability from a reactive technical exercise to a proactive business capability [42].
+(Slide 7: Implementation Timeline)
+(Presenter): We've proven this works and are ready to scale [43]. Here's our proposed timeline [14, 20, 22, 43-48]:
+•
+Next 2 weeks: Complete the initial Capital Markets implementation [14, 20, 22, 43-48]. (Currently in progress) [43, 44].
+•
+May 2025 / Q3 2025: Apply to the next 1-3 critical business flows [14, 20, 22, 43-48]. (Needs your input/decision) [43-45].
+•
+June-July 2025 / Q4 2025: Expand to 2-3 additional flows [14, 20, 22, 44-46]. (Needs resource commitment/planning) [43-45].
+•
+Q4 2025: Integrate with Start of Day reviews [14, 20, 22, 43-48]. (Planning phase) [43, 44].
+•
+2026: Scale across the enterprise [14, 20, 46].
+(Presenter): Critical success factors for this scaling involve executive commitment to the three-role shared ownership model, resource allocation during PI Planning across all three teams, and integration with the Start of Day review process [14, 42, 49]. It requires a culture shift from "Platform does monitoring" to shared accountability [14, 49].
+(Slide 8: What We Need From You Today)
+(Presenter): We've built the Factory, we've tested the approach, and we have the templates and guides [50, 51]. The Factory is ready to take your inputs [49].
+(Presenter): What we need from you today, the key questions [52], are:
+1.
+Which critical business flow matters most to you right now? [22, 47-49, 52-55] We need your definition of what's important [49].
+2.
+Will you commit resources from all three teams? [22, 47, 48, 52-55] This requires dedicated capacity [14, 42, 49].
+3.
+Will you help establish this as a shared responsibility? [47, 48, 52-54] We need commitment to enforce shared ownership [22, 55].
+(Presenter): Committing to these steps will lead to expected business outcomes like MTTR reduction, complete ownership accountability, clear business impact visibility in Start of Day reviews, and a scalable framework for our applications [56].
+(Presenter): Thank you. We're ready to start building business observability together.
+(Transcript End)

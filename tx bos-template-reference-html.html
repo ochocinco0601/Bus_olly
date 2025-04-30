@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOS Template Reference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1E4477;
+            margin-top: 0;
+            font-size: 28px;
+            border-bottom: 2px solid #1E4477;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #1E4477;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .purpose {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #1E4477;
+            margin-bottom: 25px;
+        }
+        
+        .purpose p {
+            margin: 0 0 10px 0;
+        }
+        
+        .purpose ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .purpose li {
+            margin-bottom: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        th {
+            background-color: #1E4477;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #ffeeba;
+        }
+        
+        .highlight h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .phases {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .phase {
+            flex: 1;
+            min-width: 200px;
+            background-color: #e9ecef;
+            margin: 0 10px 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .phase h3 {
+            margin-top: 0;
+            color: #1E4477;
+            border-bottom: 1px solid #ced4da;
+            padding-bottom: 8px;
+        }
+        
+        .phase p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        
+        .example {
+            background-color: #f0f4fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .example h3 {
+            margin-top: 0;
+            color: #1E4477;
+        }
+        
+        .owner-product {
+            color: #FF7043;
+            font-weight: bold;
+        }
+        
+        .owner-appdev {
+            color: #7E57C2;
+            font-weight: bold;
+        }
+        
+        .owner-platform {
+            color: #66BB6A;
+            font-weight: bold;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: white;
+            margin-left: 5px;
+        }
+        
+        .tag-product {
+            background-color: #FF7043;
+        }
+        
+        .tag-appdev {
+            background-color: #7E57C2;
+        }
+        
+        .tag-platform {
+            background-color: #66BB6A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BOS Template Reference</h1>
+        
+        <div class="purpose">
+            <h2>Purpose</h2>
+            <p>This template standardizes how we capture business observability requirements across all business processes. It ensures:</p>
+            <ul>
+                <li>✅ Every business step has a clear purpose and defined signals</li>
+                <li>✅ Ownership is clearly assigned across Product, App Dev, and Platform teams</li>
+                <li>✅ Business, process, and system signals are comprehensively defined</li>
+            </ul>
+        </div>
+        
+        <h2>Template Structure</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field Phase</th>
+                    <th>Owner</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Business Process</strong></td>
+                    <td><span class="owner-product">Product Owner</span></td>
+                    <td>Defines which broader business process this step supports</td>
+                </tr>
+                <tr>
+                    <td><strong>Step Name</strong></td>
+                    <td><span class="owner-product">Product Owner / SME</span></td>
+                    <td>Names the system step or function being observed</td>
+                </tr>
+                <tr>
+                    <td><strong>Description of Technical Function</strong></td>
+                    <td><span class="owner-appdev">Application Developer</span></td>
+                    <td>Explains what this system technically does (logic, inputs/outputs)</td>
+                </tr>
+                <tr>
+                    <td><strong>Business Function / Purpose</strong></td>
+                    <td><span class="owner-product">Product Owner</span></td>
+                    <td>Describes why this step matters and what business outcome it enables</td>
+                </tr>
+                <tr>
+                    <td><strong>Customers / Internal Users</strong></td>
+                    <td><span class="owner-product">Product Owner</span></td>
+                    <td>Lists who depends on or is affected by this step</td>
+                </tr>
+                <tr>
+                    <td><strong>What Are Users Trying to Accomplish?</strong></td>
+                    <td><span class="owner-product">Product Owner / UX</span></td>
+                    <td>Captures what goal or task the user is trying to complete</td>
+                </tr>
+                <tr>
+                    <td><strong>Target Outcomes (KPI)</strong></td>
+                    <td><span class="owner-product">Product Owner</span></td>
+                    <td>Defines what success looks like when this step works correctly</td>
+                </tr>
+                <tr>
+                    <td><strong>Definition or Formula (KPI)</strong></td>
+                    <td><span class="owner-appdev">Developer / Data Analyst</span></td>
+                    <td>Provides formula or logic used to calculate the KPI</td>
+                </tr>
+                <tr>
+                    <td><strong>Business Signals</strong></td>
+                    <td><span class="owner-product">Product Owner</span></td>
+                    <td>Identifies business value indicators that reflect success or failure</td>
+                </tr>
+                <tr>
+                    <td><strong>Process Signals</strong></td>
+                    <td><span class="owner-appdev">Developer / QA</span></td>
+                    <td>Defines process-level checks that confirm correct execution</td>
+                </tr>
+                <tr>
+                    <td><strong>System Signals</strong></td>
+                    <td><span class="owner-platform">Platform SRE</span></td>
+                    <td>Specifies system-level telemetry reflecting infrastructure health</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="highlight">
+            <h3>Shared Ownership Model</h3>
+            <p>The BOS Template enforces the three-way partnership that is fundamental to sustainable business observability:</p>
+            <ul>
+                <li><span class="tag tag-product">Product</span> Defines business context, goals, and value metrics</li>
+                <li><span class="tag tag-appdev">App Dev</span> Provides technical function understanding and process verification</li>
+                <li><span class="tag tag-platform">Platform</span> Supplies infrastructure monitoring and system health metrics</li>
+            </ul>
+            <p>Each role has clearly defined responsibilities in the template, ensuring complete coverage without ambiguity.</p>
+        </div>
+        
+        <h2>How the Factory Uses This Template</h2>
+        
+        <div class="phases">
+            <div class="phase">
+                <h3>1. DEFINE</h3>
+                <p>Product Owner completes the business context fields</p>
+            </div>
+            <div class="phase">
+                <h3>2. POPULATE</h3>
+                <p>All three teams fill in their respective signal sections</p>
+            </div>
+            <div class="phase">
+                <h3>3. VALIDATE</h3>
+                <p>Cross-functional review ensures all signals have clear owners</p>
+            </div>
+            <div class="phase">
+                <h3>4. BUILD</h3>
+                <p>Template outputs feed into dashboard requirements</p>
+            </div>
+            <div class="phase">
+                <h3>5. MONITOR</h3>
+                <p>Template becomes the reference for continuous improvement</p>
+            </div>
+        </div>
+        
+        <h2>Example (Partially Completed)</h2>
+        <div class="example">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Business Process</strong></td>
+                        <td>Stage 1: Trade Creation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Step Name</strong></td>
+                        <td>Step 1.1: Receive Pooling Data from System B</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Function</strong></td>
+                        <td>System A receives batch files from System B, parses structured loan pool data, and stores results in internal tables for further processing.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Purpose</strong></td>
+                        <td>Ensures Business Unit A has accurate and timely loan pool data to support trade creation, compliance validation, and operational readiness.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Signals</strong></td>
+                        <td>
+                            <code>Suggested:</code> <em>Percent of pool files ingested within SLA</em> <br>
+                            <code>Suggested:</code> <em>Total loan records processed</em> <br>
+                            <code>Owner:</code> <span class="owner-product">Product Owner</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Process Signals</strong></td>
+                        <td>
+                            <code>Suggested:</code> <em>Validation pass rate for required pool data fields</em> <br>
+                            <code>Suggested:</code> <em>File completeness confirmation logic executed</em> <br>
+                            <code>Owner:</code> <span class="owner-appdev">Application Developer</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>System Signals</strong></td>
+                        <td>
+                            <code>Suggested:</code> <em>System A file ingestion latency</em> <br>
+                            <code>Suggested:</code> <em>System B queue interface uptime</em> <br>
+                            <code>Suggested:</code> <em>Batch file processing success rate</em> <br>
+                            <code>Owner:</code> <span class="owner-platform">Platform SRE</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
