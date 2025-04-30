@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Factory Artifacts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            width: 85%;
+            max-width: 1100px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1E4477;
+        }
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        .artifacts {
+            display: flex;
+            gap: 40px;
+        }
+        .artifact {
+            flex: 1;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .artifact-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1E4477;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .artifact-description {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .key-feature {
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .feature-bullet {
+            color: #1E4477;
+            margin-right: 10px;
+        }
+        .owner {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: white;
+            margin-left: 5px;
+        }
+        .owner-product {
+            background-color: #FF7043;
+        }
+        .owner-appdev {
+            background-color: #7E57C2;
+        }
+        .owner-platform {
+            background-color: #66BB6A;
+        }
+        .signal-business {
+            color: #1E88E5;
+        }
+        .signal-process {
+            color: #FFC107;
+        }
+        .signal-system {
+            color: #009688;
+        }
+        .note {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #666;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Real Factory Artifacts</div>
+        <div class="subtitle">Capital Markets implementation with Jake's team</div>
+        
+        <div class="artifacts">
+            <div class="artifact">
+                <div class="artifact-title">Mini-Reference Card</div>
+                <div class="artifact-description">
+                    A one-page summary for a business step, showing why it matters, who owns each signal, and what to do when something breaks
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div>Business Impact statement: defines why this step matters</div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-business">Business Signals</span> <span class="owner owner-product">Product</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-process">Process Signals</span> <span class="owner owner-appdev">App Dev</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-system">System Signals</span> <span class="owner owner-platform">Platform</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div>Responsibility table maps conditions to actions and owners</div>
+                </div>
+            </div>
+            
+            <div class="artifact">
+                <div class="artifact-title">Dashboard Panel</div>
+                <div class="artifact-description">
+                    A visual display showing the health of the step with the same layered signals and owners
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-business">Business Signals</span> for impact visibility <span class="owner owner-product">Product</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-process">Process Signals</span> for execution health <span class="owner owner-appdev">App Dev</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div><span class="signal-system">System Signals</span> for infrastructure status <span class="owner owner-platform">Platform</span></div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div>Used in Start of Day reviews for visibility</div>
+                </div>
+                <div class="key-feature">
+                    <div class="feature-bullet">•</div>
+                    <div>Clear status indicators to highlight issues</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="note">
+            Additional artifacts: Persona Role Guide, Tactical Checklist, BO Template
+        </div>
+    </div>
+</body>
+</html>

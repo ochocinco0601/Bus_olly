@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Factory Works</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #1E4477;
+        }
+        .process {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0;
+        }
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -10px;
+            top: 40px;
+            font-size: 24px;
+            color: #999;
+        }
+        .step-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1E4477;
+            margin-bottom: 10px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .step-description {
+            font-size: 15px;
+            max-width: 90%;
+            margin: 0 auto;
+            color: #666;
+        }
+        .note {
+            margin-top: 60px;
+            font-size: 18px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">How the Factory Works</div>
+        
+        <div class="process">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-name">DEFINE</div>
+                <div class="step-description">Business flows, steps, outcomes</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-name">POPULATE</div>
+                <div class="step-description">Templates, KPIs, signals</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-name">VALIDATE</div>
+                <div class="step-description">Ownership for every signal</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-name">BUILD</div>
+                <div class="step-description">Dashboard requirements</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-name">MONITOR</div>
+                <div class="step-description">Feedback loops, adaptation</div>
+            </div>
+        </div>
+        
+        <div class="note">
+            Proven with Capital Markets team
+        </div>
+    </div>
+</body>
+</html>
