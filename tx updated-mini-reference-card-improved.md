@@ -1,8 +1,20 @@
 # 🧾 Mini Reference Card: Step 2.1 — Clearing Submission to FICC
 
-## 📌 Business Impact
+## 📌 Business Outcomes (What good looks like)
 Timely and accurate FICC submissions directly impact settlement eligibility, regulatory compliance, and financial risk exposure. Failures here lead to financial penalties and operational complications.  
 (⚖️ Compliance, 💰 Financial, ⚙️ Operational)
+
+## 📊 Business Impact Summary Template
+When this step is degraded or failing, summarize impact as:
+
+| Impact Category | Assessment | Example | 
+|-----------------|------------|---------|
+| **Customer/Process** | % of trades affected | "73% of trades pending clearing submission" |
+| **Financial** | Dollar value at risk | "Est. $340K+ trade value at risk of settlement failure" |
+| **Compliance** | Regulatory obligations | "FINRA reporting obligation triggered (4hr deadline)" |
+| **Downstream** | Subsequent processes affected | "Settlement netting cycle at risk; Trade finalization delayed" |
+
+Owner: Product Owner / Trade Operations
 
 ## 🧾 Step Overview
 | Field | Description |
