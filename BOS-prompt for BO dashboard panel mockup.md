@@ -9,7 +9,7 @@ In full dashboards, multiple step panels will be composed together based on busi
 
 ## Instructions
 
-- Use the completed Mini Reference Card and Signal Matrix as input.
+- Use the completed Business Impact Playbook and Signal Matrix as input.
 - Create a clean, structured dashboard **panel** layout that includes:
   - **Panel Title** (Step Name)
   - **Purpose Summary** (Always listed first — anchors operational relevance)
@@ -18,6 +18,7 @@ In full dashboards, multiple step panels will be composed together based on busi
     - Business Signals first
     - Then Process Signals
     - Then System Signals
+  - **Business Impact Summary** (When degraded/failing, summarize key impacts)
   - **Recent Alerts Section**
   - **Next Steps / Monitoring Actions Section**
 
@@ -35,29 +36,36 @@ In full dashboards, multiple step panels will be composed together based on busi
 Return the panel in a clean text-box layout:
 
 ```markdown
-┌────────────────────────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────┐
 │      DASHBOARD PANEL — [Step Name]                                          │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
+├────────────────────────────────────────────────────┤
+│                                                            │
 │  🧭 Purpose: [Short statement explaining operational goal for this step]   │
-│                                                                            │
+│                                                            │
 │  📌 Used by: [Audience: Personas, Teams]                                    │
-│                                                                            │
+│                                                            │
 │  📈 BUSINESS SIGNALS                                                       │
 │  - [Metric Name]: [Current Value] ✓ (`Owner:` [Role])                      │
 │  - [Metric Name]: [Current Value] ✓ (`Owner:` [Role])                      │
-│                                                                            │
+│                                                            │
 │  ⚙ PERFORMANCE RELIABILITY SIGNALS                                         │
 │  🟨 Process Signals                                                        │
 │  - [Metric Name]: [Current Value] ✓ (`Owner:` [Role])                      │
-│                                                                            │
+│                                                            │
 │  🟧 System Signals                                                         │
 │  - [Metric Name]: [Current Value] ✓ (`Owner:` [Role])                      │
-│                                                                            │
+│                                                            │
+│  🔍 BUSINESS IMPACT SUMMARY                                                │
+│  - [Customer/Process Impact: Brief statement]                              │
+│  - [Financial Impact: Brief statement]                                     │
+│  - [Compliance Impact: Brief statement]                                    │
+│  - [Downstream Impact: Brief statement]                                    │
+│                                                            │
 │  🚨 RECENT ALERTS                                                          │
 │  - [Example: Alert for validation failure, SLA breach, or latency spike]    │
-│                                                                            │
+│                                                            │
 │  🔍 NEXT STEPS                                                             │
 │  • [Instruction 1: Action based on signal or threshold]                   │
 │  • [Instruction 2: Escalation or monitoring guidance]                     │
-└────────────────────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────┘
+```
