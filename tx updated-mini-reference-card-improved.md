@@ -26,11 +26,6 @@ Owner: Product Owner / Trade Operations
 | **Business Purpose** | Ensures trades are properly submitted for central clearing, enabling settlement eligibility and reducing counterparty risk. |
 | **Key Personas** | - Trade Operations team <br> - Risk Management <br> - Compliance officers <br> - Financial Controllers |
 
-## 🎯 Critical Outcomes
-- Submit trades for clearing within regulatory timeframes
-- Ensure all eligible trades are included in FICC netting cycles
-- Minimize settlement risk and operational overhead
-
 ## 📈 KPIs
 | KPI | Target | Description | Owner |
 |-----|--------|-------------|-------|
