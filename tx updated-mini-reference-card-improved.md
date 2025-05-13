@@ -1,4 +1,4 @@
-# 🧾 Mini Reference Card: Step 2.1 — Clearing Submission to FICC
+# 🧾 Business Impact Playbook: Step 2.1 — Clearing Submission to FICC
 
 ## 📌 Business Outcomes (What good looks like)
 Timely and accurate FICC submissions directly impact settlement eligibility, regulatory compliance, and financial risk exposure. Failures here lead to financial penalties and operational complications.  
