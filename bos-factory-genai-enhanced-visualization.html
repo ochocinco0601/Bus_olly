@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOS Factory: AI-Enhanced Process Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+        
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .step-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .step-header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .step-number {
+            background-color: white;
+            color: #2c3e50;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .step-body {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-description {
+            margin-bottom: 20px;
+        }
+        
+        .step-output {
+            padding: 12px 15px;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        
+        .step-output h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+        
+        .prompt-section {
+            flex: 1;
+            background-color: #EDE7F6;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .prompt-header {
+            font-weight: bold;
+            color: #5E35B1;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .prompt-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .prompt-description {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        .prompt-io {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .prompt-input, .prompt-output {
+            flex: 1;
+            background-color: white;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #D1C4E9;
+            font-size: 0.9em;
+        }
+        
+        .io-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #5E35B1;
+            font-size: 0.85em;
+        }
+        
+        .role-section {
+            margin-top: 15px;
+        }
+        
+        .role-list {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        
+        .role-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .product-badge {
+            background-color: #E3F2FD;
+            color: #1E88E5;
+        }
+        
+        .appdev-badge {
+            background-color: #FFF8E1;
+            color: #FFA000;
+        }
+        
+        .platform-badge {
+            background-color: #E0F2F1;
+            color: #00796B;
+        }
+        
+        .arrow-down {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            color: #78909c;
+        }
+        
+        .demo-section {
+            margin-top: 50px;
+        }
+        
+        .demo-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .sample-output {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        .tips-box {
+            background-color: #F3E5F5;
+            border-left: 4px solid #8E24AA;
+            padding: 15px 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        
+        .tips-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #6A1B9A;
+        }
+        
+        .quick-start {
+            margin-top: 40px;
+            background-color: #E8F5E9;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .quick-start-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #2E7D32;
+        }
+        
+        .quick-start-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .quick-step {
+            flex: 1;
+            min-width: 200px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .quick-step-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #2E7D32;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 8px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        
+        .quick-step-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .terminal-box {
+            background-color: #263238;
+            color: #ECEFF1;
+            font-family: monospace;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .terminal-prompt {
+            color: #8BC34A;
+        }
+        
+        .prompt-command {
+            color: #64B5F6;
+        }
+        
+        .prompt-highlight {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            padding: 2px 5px;
+        }
+        
+        .tab-container {
+            margin: 30px 0;
+        }
+        
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-button {
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .tab-button.active {
+            background-color: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+        }
+        
+        .tab-content {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            padding: 20px;
+        }
+        
+        .checklist {
+            margin: 20px 0;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #2c3e50;
+            border-radius: 3px;
+            margin-right: 10px;
+            position: relative;
+        }
+        
+        .checkbox.checked::after {
+            content: "✓";
+            position: absolute;
+            font-weight: bold;
+            color: #2c3e50;
+            top: -2px;
+            left: 2px;
+        }
+        
+        .code-block {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        
+        .prompt-sample {
+            background-color: #f8f8f8;
+            border-left: 4px solid #7E57C2;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>BOS Factory: AI-Enhanced Process Guide</h1>
+    
+    <div class="container">
+        <div class="intro">
+            <div class="intro-text">
+                <p>The BOS Factory is powered by a set of GenAI prompts that dramatically simplify the process of creating business observability artifacts. This guide shows how these prompts fit into the workflow and reduce the complexity at each stage.</p>
+            </div>
+        </div>
+        
+        <div class="quick-start">
+            <div class="quick-start-title">Quick Start: The BOS Factory in 5 Minutes</div>
+            <p>The BOS Factory uses GenAI prompts to transform manual work into guided processes. Here's how it works:</p>
+            
+            <div class="quick-start-steps">
+                <div class="quick-step">
+                    <div class="quick-step-title">
+                        <span class="quick-step-number">1</span>
+                        Define Business Flow
+                    </div>
+                    <p>Identify the business flow to observe and break it into steps</p>
+                </div>
+                
+                <div class="quick-step">
+                    <div class="quick-step-title">
+                        <span class="quick-step-number">2</span>
+                        Run Template Prompt
+                    </div>
+                    <p>Use GenAI to fill the template with basic step information</p>
+                </div>
+                
+                <div class="quick-step">
+                    <div class="quick-step-title">
+                        <span class="quick-step-number">3</span>
+                        Run Signals Prompt
+                    </div>
+                    <p>Generate structured signals with clear ownership</p>
+                </div>
+                
+                <div class="quick-step">
+                    <div class="quick-step-title">
+                        <span class="quick-step-number">4</span>
+                        Build Artifacts
+                    </div>
+                    <p>Create mini-ref cards and dashboard panels automatically</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-flow">
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">DEFINE: Map Business Flow & Steps</div>
+                </div>
+                <div class="step-body">
+                    <div class="step-content">
+                        <div class="step-description">
+                            <p>The <strong>Define</strong> stage establishes the business flow structure. Product and App Dev teams identify the flow, stages, and steps to be observed.</p>
+                            
+                            <div class="role-section">
+                                <strong>Who contributes:</strong>
+                                <div class="role-list">
+                                    <div class="role-badge product-badge">Product Owner</div>
+                                    <div class="role-badge appdev-badge">App Developer</div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-output">
+                                <h4>Output: Business Flow Map</h4>
+                                <ul>
+                                    <li>Hierarchical structure: Flow → Stages → Steps</li>
+                                    <li>Business purpose for each step</li>
+                                    <li>Technical function description</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-section">
+                        <div class="prompt-header">
+                            <div class="prompt-icon">🤖</div>
+                            <div>GenAI Assistance</div>
+                        </div>
+                        
+                        <div class="prompt-description">
+                            <p><strong>No specialized prompt needed for this stage.</strong></p>
+                            <p>Use standard collaborative techniques to identify the business flow, define stages, and map out steps. This information becomes the input for the next stage.</p>
+                        </div>
+                        
+                        <div class="terminal-box">
+                            <span class="terminal-prompt">$</span> Define the flow structure:<br>
+                            <span class="prompt-command">Flow: Capital Markets Trading</span><br>
+                            <span class="prompt-command">Stages: Trade Creation, Clearing & Settlement, Post-Trade</span><br>
+                            <span class="prompt-command">Steps: [List individual process steps...]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow-down">⬇️</div>
+            
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">POPULATE: Fill Template with GenAI</div>
+                </div>
+                <div class="step-body">
+                    <div class="step-content">
+                        <div class="step-description">
+                            <p>The <strong>Populate</strong> stage leverages GenAI to fill in the Business Observability Template. This dramatically simplifies what would otherwise be a manual, complex process.</p>
+                            
+                            <div class="role-section">
+                                <strong>Who contributes:</strong>
+                                <div class="role-list">
+                                    <div class="role-badge product-badge">Product Owner</div>
+                                    <div class="role-badge appdev-badge">App Developer</div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-output">
+                                <h4>Output: Partially Completed Template</h4>
+                                <ul>
+                                    <li>Step details with business and technical context</li>
+                                    <li>Placeholder fields for review and validation</li>
+                                    <li>Suggested values for complex fields</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-section">
+                        <div class="prompt-header">
+                            <div class="prompt-icon">🤖</div>
+                            <div>GenAI Prompt: Template Completion</div>
+                        </div>
+                        
+                        <div class="prompt-description">
+                            <p>The <strong>Template Completion prompt</strong> takes basic business flow information and generates a structured template with placeholder suggestions.</p>
+                        </div>
+                        
+                        <div class="prompt-io">
+                            <div class="prompt-input">
+                                <div class="io-title">PROMPT INPUT</div>
+                                <p>Basic business flow information:</p>
+                                <ul>
+                                    <li>Step name & description</li>
+                                    <li>Business process context</li>
+                                    <li>Known users/customers</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prompt-output">
+                                <div class="io-title">PROMPT OUTPUT</div>
+                                <p>Completed template with:</p>
+                                <ul>
+                                    <li>Structured field format</li>
+                                    <li>Suggested values for all fields</li>
+                                    <li>Ownership tags for each field</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="prompt-sample">
+                            <strong>Prompt file:</strong> BOS-prompt for BO template completion.md
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow-down">⬇️</div>
+            
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">VALIDATE: Verify & Enhance With GenAI</div>
+                </div>
+                <div class="step-body">
+                    <div class="step-content">
+                        <div class="step-description">
+                            <p>The <strong>Validate</strong> stage ensures the template is complete and properly structured. GenAI analyzes the template for gaps and suggests improvements.</p>
+                            
+                            <div class="role-section">
+                                <strong>Who contributes:</strong>
+                                <div class="role-list">
+                                    <div class="role-badge product-badge">Product Owner</div>
+                                    <div class="role-badge appdev-badge">App Developer</div>
+                                    <div class="role-badge platform-badge">Platform SRE</div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-output">
+                                <h4>Output: Validated & Enriched Template</h4>
+                                <ul>
+                                    <li>Completed template with all fields filled</li>
+                                    <li>Structured business, process, and system signals</li>
+                                    <li>Clear ownership boundaries for every field</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-section">
+                        <div class="prompt-header">
+                            <div class="prompt-icon">🤖</div>
+                            <div>GenAI Prompts: Validation & Signals</div>
+                        </div>
+                        
+                        <div class="prompt-description">
+                            <p>Two powerful prompts work together in this stage to validate and enrich the template:</p>
+                        </div>
+                        
+                        <div class="prompt-io">
+                            <div class="prompt-input">
+                                <div class="io-title">TEMPLATE VALIDATION PROMPT</div>
+                                <p>Analyzes partial template for:</p>
+                                <ul>
+                                    <li>Missing or unclear fields</li>
+                                    <li>Inconsistencies in definitions</li>
+                                    <li>Alignment with step type</li>
+                                </ul>
+                                <p><strong>File:</strong> BOS-prompt for BO template validation.md</p>
+                            </div>
+                            
+                            <div class="prompt-output">
+                                <div class="io-title">SIGNALS ENRICHMENT PROMPT</div>
+                                <p>Adds structured signals:</p>
+                                <ul>
+                                    <li>Business signals (Product owned)</li>
+                                    <li>Process signals (App Dev owned)</li>
+                                    <li>System signals (Platform owned)</li>
+                                </ul>
+                                <p><strong>File:</strong> BOS-prompt for BO template signals.md</p>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-box">
+                            <span class="terminal-prompt">$</span> Validation workflow:<br>
+                            <span class="prompt-command">1. Run template validation prompt</span><br>
+                            <span class="prompt-command">2. Review and approve suggestions</span><br>
+                            <span class="prompt-command">3. Run signals enrichment prompt</span><br>
+                            <span class="prompt-command">4. Finalize with all team members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow-down">⬇️</div>
+            
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">BUILD: Create Artifacts With GenAI</div>
+                </div>
+                <div class="step-body">
+                    <div class="step-content">
+                        <div class="step-description">
+                            <p>The <strong>Build</strong> stage transforms the validated template into operational artifacts. GenAI automatically generates reference cards and dashboard panels.</p>
+                            
+                            <div class="role-section">
+                                <strong>Who contributes:</strong>
+                                <div class="role-list">
+                                    <div class="role-badge product-badge">Product Owner (Review)</div>
+                                    <div class="role-badge platform-badge">Platform SRE (Implementation)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-output">
+                                <h4>Output: Operational Artifacts</h4>
+                                <ul>
+                                    <li>Mini Reference Cards with business context</li>
+                                    <li>Dashboard Panel requirements</li>
+                                    <li>Ownership traceability documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-section">
+                        <div class="prompt-header">
+                            <div class="prompt-icon">🤖</div>
+                            <div>GenAI Prompts: Artifact Creation</div>
+                        </div>
+                        
+                        <div class="prompt-description">
+                            <p>Two specialized prompts transform the validated template into operational artifacts:</p>
+                        </div>
+                        
+                        <div class="prompt-io">
+                            <div class="prompt-input">
+                                <div class="io-title">MINI REFERENCE CARD PROMPT</div>
+                                <p>Creates a concise reference guide:</p>
+                                <ul>
+                                    <li>Step overview and business context</li>
+                                    <li>Structured signals by layer and owner</li>
+                                    <li>Action table for incident response</li>
+                                </ul>
+                                <p><strong>File:</strong> BOS-prompt for BO mini ref card.md</p>
+                            </div>
+                            
+                            <div class="prompt-output">
+                                <div class="io-title">DASHBOARD PANEL PROMPT</div>
+                                <p>Designs visualization requirements:</p>
+                                <ul>
+                                    <li>Panel layout with business context</li>
+                                    <li>Signal grouping and prioritization</li>
+                                    <li>Ownership tags for accountability</li>
+                                </ul>
+                                <p><strong>File:</strong> BOS-prompt for BO dashboard panel mockup.md</p>
+                            </div>
+                        </div>
+                        
+                        <div class="prompt-sample">
+                            <strong>Additional Prompt:</strong> BOS-prompt for BO ownership traceability.md<br>
+                            Creates a traceability table mapping dashboard signals to their owners.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow-down">⬇️</div>
+            
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title">MONITOR: Implement & Track</div>
+                </div>
+                <div class="step-body">
+                    <div class="step-content">
+                        <div class="step-description">
+                            <p>The <strong>Monitor</strong> stage implements the artifacts and establishes feedback loops. The system evolves based on operational experience.</p>
+                            
+                            <div class="role-section">
+                                <strong>Who contributes:</strong>
+                                <div class="role-list">
+                                    <div class="role-badge product-badge">Product Owner</div>
+                                    <div class="role-badge platform-badge">Platform SRE</div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-output">
+                                <h4>Output: Operational Monitoring</h4>
+                                <ul>
+                                    <li>Live dashboard panels in production</li>
+                                    <li>Alerting based on defined thresholds</li>
+                                    <li>Regular review and improvement process</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-section">
+                        <div class="prompt-header">
+                            <div class="prompt-icon">🤖</div>
+                            <div>Implementation Workflow</div>
+                        </div>
+                        
+                        <div class="prompt-description">
+                            <p>The final stage focuses on implementation and continuous improvement:</p>
+                        </div>
+                        
+                        <div class="terminal-box">
+                            <span class="terminal-prompt">$</span> Implementation steps:<br>
+                            <span class="prompt-command">1. Create dashboards from panel requirements</span><br>
+                            <span class="prompt-command">2. Configure alerts based on signal thresholds</span><br>
+                            <span class="prompt-command">3. Establish review cycles (typically monthly)</span><br>
+                            <span class="prompt-command">4. Document in knowledge base for operation teams</span>
+                        </div>
+                        
+                        <div class="prompt-sample">
+                            <strong>Feedback Loop:</strong> As business processes evolve, revisit the template and re-run prompts to update artifacts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Example: Transformed by GenAI Prompts</h2>
+        
+        <div class="tips-box">
+            <div class="tips-title">💡 How GenAI Transforms the Process</div>
+            <p>Without GenAI, creating business observability artifacts would require:</p>
+            <ul>
+                <li>Manual template creation for each business step</li>
+                <li>Lengthy workshops to identify all signals</li>
+                <li>Custom formatting of reference cards</li>
+                <li>Manual dashboard design for each panel</li>
+            </ul>
+            <p>With GenAI prompts, these tasks are transformed into guided processes that produce consistent, high-quality outputs in minutes rather than days.</p>
+        </div>
+        
+        <div class="sample-output">
+            <h3>Example: From Template to Mini Reference Card</h3>
+            
+            <p>Let's see how the template for "Step 2.1: Clearing Submission to FICC" transforms through the process:</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <div class="tab-button active">Input Template</div>
+                    <div class="tab-button">GenAI Process</div>
+                    <div class="tab-button">Output Artifact</div>
+                </div>
+                
+                <div class="tab-content">
+                    <h4>Original Template Fields</h4>
+                    <div class="code-block">
+                        Step Name: Step 2.1: Clearing Submission to FICC<br>
+                        Business Process: Stage 2: Clearing & Settlement<br>
+                        Step Type: Integration<br>
+                        Technical Function: Our clearing system formats trade data and submits it to FICC's gateway for central clearing...<br>
+                        Business Purpose: Ensures trades are properly submitted for central clearing, enabling settlement eligibility...
+                    </div>
+                    
+                    <p>This is typical of what teams would provide at the start of the process.</p>
+                </div>
+            </div>
+            
+            <div class="terminal-box">
+                <span class="terminal-prompt">$</span> Running the GenAI workflow:<br><br>
+                
+                <span class="prompt-command">1. Run template validation prompt → Validates fields, suggests improvements</span><br>
+                <span class="prompt-command">2. Run signals enrichment prompt → Adds structured signals with ownership</span><br>
+                <span class="prompt-command">3. Run mini ref card prompt → Transforms into operational reference</span><br>
+                <span class="prompt-command">4. Run dashboard panel prompt → Creates visualization requirements</span>
+            </div>
+            
+            <p>After running these prompts, you get structured artifacts like the Business Impact Playbook (Mini Reference Card) shown in the full example document.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Getting Started: Your First BOS Factory Run</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Review the BOS-Tactical Checklist.md to understand the full process</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Identify a simple business process step to start with</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Gather basic information about the business purpose and technical function</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox checked"></div>
+                <div>Run the template completion prompt with your initial information</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Review and refine the template with Product and App Dev teams</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Run the signals enrichment prompt to add structured signals</div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div>Generate the mini reference card and dashboard panel</div>
+            </div>
+        </div>
+        
+        <div class="tips-box">
+            <div class="tips-title">📝 Prompt Tips & Tricks</div>
+            <ul>
+                <li><strong>Be specific with context.</strong> The more detailed information you provide to the prompts, the better the output.</li>
+                <li><strong>Review prompt outputs.</strong> GenAI suggestions should be validated by the appropriate role before proceeding.</li>
+                <li><strong>Iterate if needed.</strong> It's normal to run prompts multiple times with refinements.</li>
+                <li><strong>Save all artifacts.</strong> Templates, reference cards, and dashboard requirements should be stored together.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
